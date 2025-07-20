@@ -5,6 +5,7 @@ import morgan from "morgan";
 import helmet from "helmet";
 import cors from "cors";
 import dashboardRoutes from "./Routs/dashbordrouts";
+import productRoutes from "./Routs/ProductsRout";
 /* * Import  routes here*/
 
 
@@ -21,7 +22,7 @@ app.use(cors());
 
 
 app.use("/dashboard", dashboardRoutes); // http://localhost:8000/dashboard
-// app.use("/products", productRoutes); // http://localhost:8000/products
+app.use("/products", productRoutes); // http://localhost:8000/products
 // app.use("/users", userRoutes); // http://localhost:8000/users
 // app.use("/expenses", expenseRoutes); // http://localhost:8000/expenses
 
